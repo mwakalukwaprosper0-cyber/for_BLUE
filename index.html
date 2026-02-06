@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Patricia ❤️</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 15px 35px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #no {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Patricia, will you be my Valentine? 💖</h1>
+
+    <div class="buttons">
+        <button id="yes" onclick="goToLetter()">YES</button>
+        <button id="no" onclick="growYes()">NO</button>
+    </div>
+
+    <script>
+        const yesBtn = document.getElementById("yes");
+
+        function growYes() {
+            // Get current font size
+            const style = window.getComputedStyle(yesBtn);
+            const currentSize = parseInt(style.fontSize);
+            // Increase by 5px
+            yesBtn.style.fontSize = (currentSize + 5) + "px";
+            yesBtn.style.padding = (15 + (currentSize - 18)/2) + "px 35px";
+        }
+
+        function goToLetter() {
+            window.location.href = "letter.html";
+        }
+    </script>
+
+</body>
+</html>
